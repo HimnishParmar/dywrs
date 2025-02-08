@@ -1,0 +1,373 @@
+* {
+    --cta-shadow: 0 0 5px rgba(8, 2, 66, 1);
+    --cta-bg: rgba(0, 0, 0, 0.3);
+    --cta-color-hover: rgb(0, 0, 0);
+    --nav-color: rgb(217, 217, 217);
+    --nav-color-hover: rgb(245, 245, 245);
+}
+
+body {
+    font-family: "Poppins", serif;
+    background: black;
+    overflow: hidden;
+}
+
+.main-bg {
+    position: absolute;
+    width: 100vw;
+    /* Adjust as needed */
+    height: fit-content;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.main-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-bg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    /* Adjust height of the fade effect */
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+
+
+
+        /* Style for the main scrollable container */
+main {
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+overflow-x: hidden;
+height: 100vh;
+}
+
+/* Make the scrollbar width minimal */
+main::-webkit-scrollbar {
+    background: transparent;
+    width: 8px; /* You can adjust the width of the scrollbar */
+}
+
+/* Style the scrollbar track (background) to be transparent */
+main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Style the scrollbar thumb (handle) */
+main::-webkit-scrollbar-thumb {
+    background-color: rgba(40, 40, 40, 1); /* Semi-transparent handle */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Style for when the user hovers over the scrollbar thumb */
+main::-webkit-scrollbar-thumb:hover {
+background-color: rgba(0, 0, 0, 0.8); /* Darker when hovered */
+}
+
+flex-vw-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.page,
+.page1,
+.page2,
+.page3 {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.floating-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+logo logo-text {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    display: flex;
+    z-index: 9999999999999999999999999999999;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+header.glass {
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.284);
+}
+
+header menu-bar {
+    display: flex;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+header menu {
+    display: block;
+    padding: 5px 8px;
+    color: var(--nav-color);
+    cursor: pointer;
+}
+
+header menu:hover {
+    color: var(--nav-color-hover);
+}
+
+header menu.book {
+    
+    background: var(--cta-bg);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    color: var(--nav-color);
+    cursor: pointer;
+}
+
+header menu.book:hover {
+    color: var(--cta-color-hover, black);
+    background: var(--cta-bg-hover, white);
+}
+
+
+hero-section {
+    text-align: center
+}
+
+hero-heading {
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+hero-content {
+    display: block;
+    font-size: 25px;
+    font-weight: 200;
+    color: rgb(227, 227, 227);
+}
+
+.cta {
+    cursor: pointer;
+    font-size: 18px;
+    background: var(--cta-bg);
+    box-shadow: var(--cta-shadow);
+    border-radius: 20px;
+    padding: 10px 15px;
+    backdrop-filter: blur(2px);
+    color: var(--nav-color);
+}
+
+.cta:hover {
+    color: var(--nav-color-hover);
+    backdrop-filter: blur(3px);
+}
+
+main-heading {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
+}
+
+main-content {
+    display: block;
+    font-weight: 200;
+    line-height: 50px;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+main-sub-content {
+    display: block;
+    font-weight: 200;
+    font-size: 20px;
+    color: rgb(226, 226, 226);
+}
+
+small {
+    display: block;
+    font-weight: 100;
+    font-size: 17px;
+    color: rgb(223, 215, 215);
+}
+
+row {
+    display: flex;
+}
+
+col-6 {
+    display: block;
+    width: 50%;
+}
+
+col-4 {
+    display: block;
+    width: 33.33%;
+}
+
+col-5 {
+    display: block;
+    width: 41.667%;
+}
+
+col-7 {
+    display: block;
+    width: 58.33%;
+}
+
+col-8 {
+    display: block;
+    width: 66.667%;
+}
+
+col-9 {
+    display: block;
+    width: 75%;
+}
+
+col-6 {
+    display: block;
+    width: 50%;
+}
+
+main-section-7 {
+    display: block;
+    margin-left: 30vw;
+    height: fit-content;
+    width: 60vw;
+    padding: 20px;
+}
+
+page {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+custom-marquee {
+    margin-bottom: 20px;
+    display: flex;
+    overflow: hidden;
+    gap: 60px;
+    white-space: nowrap;
+    position: relative;
+}
+
+custom-marquee .content {
+    display: inline-flex;
+    gap: 60px;
+    animation: scroll 45s linear infinite;
+    /* Smooth, infinite scrolling */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+        /* Start from the beginning */
+    }
+
+    to {
+        transform: translateX(-100%);
+        /* Move one full width to the left */
+    }
+}
+
+
+main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+}
+recycle-modal{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+r-modal-section{
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+r-modal-section section{
+    display: block;
+}
+
+r-sections{
+    display: flex;
+    gap: 10px;
+}
+
+r-tag{
+    display: block;
+    color: aliceblue;
+}
+
+modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+modal.active {
+    pointer-events: all;
+}
+
+
+modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: all 300ms ease-in-out;
+}
+
+modal.active {
+    opacity: 1;
+    z-index: 100;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    transition: all 300ms ease-in-out;
+}
